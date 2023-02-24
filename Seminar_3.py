@@ -58,18 +58,18 @@ k = 3
 # Output: {'S005', 'S002', 'S007', 'S001', 'S009'}
 
 
-lst = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {" V ":"S009"}, {" VIII ":"S007"}] 
-res = [0]*len(lst)
-temp = []
+# lst = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {" V ":"S009"}, {" VIII ":"S007"}] 
+# res = [0]*len(lst)
+# temp = []
 
-for i in range(len(lst)):
-    res[i] = list(lst[i].values())
+# for i in range(len(lst)):
+#     res[i] = list(lst[i].values())
 
-for i in range(len(res)):
-    if res[i] not in temp:
-        temp.append(res[i])
+# for i in range(len(res)):
+#     if res[i] not in temp:
+#         temp.append(res[i])
 
-print(temp)
+# print(temp)
 # =================================================
 # Дан массив, состоящий из целых чисел. Напишите программу, 
 # которая подсчитает количество элементов массива, 
@@ -79,5 +79,11 @@ print(temp)
 # Пояснение: (-1 < 5, 2 < 3)
 
 import random
-list_ = [random.randint(0,10) for i in range(10)]
+list_ = [random.randint(0,10) for i in range(5)]
+count = 0
 print(list_)
+for i in range(len(list_)-1):
+    if list_[i+1] > list_[i]:
+        count += 1
+
+print(count)
