@@ -27,22 +27,22 @@ def task1():
 # Помогите Кате отгадать задуманные Петей числа.
 # ==============================================================
 def task2():
-    s = int(input())
-    p = int(input())
-    y = round((s + (s**2 - 4*p)**0.5)//2)
-    x = s - y
-    print(x, y)
+    x = int(input())
+    y = int(input())
+    for i in range(x):
+        for j in range(y):
+            if x == i + j and y == i * j:
+                print(i, j)
 
 # Задача 14: Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
 # ==============================================================
 def task3():
     n = int(input())
     a = i = 0
-    while a < n:
+    while 2**i <= n:
+        print(2**i)
         i += 1
-        a = 2**i
-        print(a)
        
 # task1()   
-# task2()
-task3()
+task2()
+# task3()
